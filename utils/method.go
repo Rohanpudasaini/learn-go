@@ -2,21 +2,26 @@ package utils
 
 import errors "errors"
 
-func Add(a, b int) int {
-	return a + b
+type Calculator struct {
+	A int
+	B int
 }
 
-func Subtract(a, b int) int {
-	return a - b
+func (c Calculator) Add() int {
+	return c.A + c.B
 }
 
-func Multiply(a, b int) int {
-	return a * b
+func (c Calculator) Subtract() int {
+	return c.A - c.B
 }
 
-func Divide(a, b int) (int, error) {
-	if b == 0 {
+func (c Calculator) Multiply() int {
+	return c.A * c.B
+}
+
+func (c Calculator) Divide() (int, error) {
+	if c.B == 0 {
 		return 0, errors.New("Divide by zero Error") // handle division by zero
 	}
-	return a / b, nil
+	return c.A / c.B, nil
 }
