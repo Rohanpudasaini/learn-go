@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/Rohanpudasaini/learn-go/utils"
 )
 
@@ -14,19 +12,20 @@ type Random struct {
 // var c, python, java = true, 12, "no!"
 
 func main() {
+	utils.Init()
 	// var a, b int = 20, 0
-	fmt.Println("Pointers in Go")
-	val := 50
-	fmt.Println("Before:", val, " at address: ", &val)
-	utils.ChangeValue(&val)
-	fmt.Println("After:", val, " at address: ", &val)
-	val1 := 10
-	val2 := 20
-	utils.Swap(&val1, &val2)
-	fmt.Println(val1, val2)
-	var p = &Random{1, 2}
-	// println(&Random{1, 2})
-	fmt.Println(p)
+	// fmt.Println("Pointers in Go")
+	// val := 50
+	// fmt.Println("Before:", val, " at address: ", &val)
+	// utils.ChangeValue(&val)
+	// fmt.Println("After:", val, " at address: ", &val)
+	// val1 := 10
+	// val2 := 20
+	// utils.Swap(&val1, &val2)
+	// fmt.Println(val1, val2)
+	// var p = &Random{1, 2}
+	// // println(&Random{1, 2})
+	// fmt.Println(p)
 
 	// i := 12
 	// f := float64(i)
