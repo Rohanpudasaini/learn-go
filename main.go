@@ -6,6 +6,10 @@ import (
 	"github.com/Rohanpudasaini/learn-go/utils"
 )
 
+type Random struct {
+	A, B int
+}
+
 // var c, python, java bool
 // var c, python, java = true, 12, "no!"
 
@@ -16,6 +20,14 @@ func main() {
 	fmt.Println("Before:", val, " at address: ", &val)
 	utils.ChangeValue(&val)
 	fmt.Println("After:", val, " at address: ", &val)
+	val1 := 10
+	val2 := 20
+	utils.Swap(&val1, &val2)
+	fmt.Println(val1, val2)
+	var p = &Random{1, 2}
+	// println(&Random{1, 2})
+	fmt.Println(p)
+
 	// i := 12
 	// f := float64(i)
 	// u := uint(f)
